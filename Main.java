@@ -19,25 +19,25 @@ public class Main {
 
         do {
             phone = summPhoneDigitals(phone);
-            System.out.println("Phone summ = " + phone);
+            System.out.println("Phone numbers summ = " + phone);
         } while (phone > 10);
 
         System.out.println("The final number is: " + getFinalNumber(phone));
     }
 
     private static String getFinalNumber(long phone) {
-        switch ((int) phone){
+        switch ((int) phone) {
             case 1: {
                 return "One";
             }
             case 2: {
-                return  "Two";
+                return "Two";
             }
             case 3: {
-                return  "Three";
+                return "Three";
             }
             case 4: {
-                return  "Four";
+                return "Four";
             }
             default: {
                 return String.valueOf(phone);
@@ -59,7 +59,11 @@ public class Main {
             System.out.println("Can't parse number!");
             return false;
         }
-        if (phoneNumber.length()<10) {
+        if (phoneNumber.length() < 10) {
+            System.out.println("Number length too short!");
+            return false;
+        }
+        if (phoneNumber.length() > 14) {
             System.out.println("Number length too short!");
             return false;
         }
